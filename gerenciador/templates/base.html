@@ -1,0 +1,63 @@
+<html>
+    <head>
+        {% block titulo %}
+            <title>FDP - Folha de Ponto</title>
+        {% endblock %}
+
+        {% block meta %}
+            <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+            <meta http-equiv="Content-Language" content="pt-br" />
+            <meta name="keywords" content="Folha de Ponto, wsilva, Python, Django" />
+            <meta name="description" content="Sistema de registro de ponto simples par agerenciamento pessoal do @_wsilva." />
+        {% endblock meta %}
+
+        {% block style %}
+            <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/layout.css"/>
+        {% endblock style %}
+
+        {% block scripts %}
+        {% endblock scripts %}
+    </head>
+
+    <body>
+
+        <div id="header">
+            <div id="logo">
+                &nbsp;                
+            </div>
+            <div id="titulo">
+                <h1><a href="/">FDP - Folha de Ponto</a></h1>
+            </div>
+        </div>
+
+        <div id="content">
+
+            <div id="miolo">
+                {% block corpo %}
+                    <!-- corpo -->
+                {% endblock %}
+            </div>
+
+            <div id="boxes">
+                {% block caixas %}
+                    <div class="box">
+                        <!-- caixas -->
+                        <h2>Caixa 1</h2>
+                        <p>Conteudo do caixa 1</p>
+                    </div>
+                {% endblock %}
+            </div>
+
+        </div>
+
+        <div id="footer">
+
+            <div id="footer-content">
+                by @_wsilva
+            </div>
+
+        </div>
+
+    </body>
+
+</html>
